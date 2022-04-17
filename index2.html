@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Menu</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="navegacao">
+        <ul>
+            <li class="lista ativa">
+                <a href="#">
+                    <span class="icone">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="texto">HOME</span>
+                </a>
+            </li>
+            <li class="lista">
+                <a href="#">
+                    <span class="icone">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="texto">PERFIL</span>
+                </a>
+            </li>
+            <li class="lista">
+                <a href="#">
+                    <span class="icone">
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                    </span>
+                    <span class="texto">MENSAGEM</span>
+                </a>
+            </li>
+            <li class="lista">
+                <a href="#">
+                    <span class="icone">
+                        <ion-icon name="camera-outline"></ion-icon>
+                    </span>
+                    <span class="texto">FOTOS</span>
+                </a>
+            </li>
+            <li class="lista">
+                <a href="#">
+                    <span class="icone">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </span>
+                    <span class="texto">SETTINGS</span>
+                </a>
+            </li>
+
+            <div class="indicador"></div>
+
+        </ul>
+
+    </div>
+
+    <script>
+        const list = document.querySelectorAll('.lista');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('ativa'));
+            this.classList.add('ativa');
+        }
+        list.forEach((item) =>
+        item.addEventListener('click',activeLink));
+    </script>
+
+<script  type = "module"  src = "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" ></script> 
+<script  nomodule  src = "https://unpkg .com/ionicons@5.5.2/dist/ionicons/ionicons.js" > </script>
+
+</body>
+
+</html>
